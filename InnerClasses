@@ -1,0 +1,29 @@
+class OuterClass {
+  int x = 10;
+  InnerClass i;
+  OuterClass()
+  {
+      i=new InnerClass();
+      i.display();
+  }
+  void show()
+  {
+      System.out.println("Outer class"+x);
+  }
+
+  class InnerClass {
+    int y = 5;
+    void display()
+    {
+        System.out.println("Inner class"+y);
+    }
+  }
+}
+
+class MyMainClass {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    myOuter.show();
+
+  }
+}
